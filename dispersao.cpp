@@ -10,7 +10,7 @@ int rank, size;
 // será p_count * p_count.
 constexpr int p_count = 512;
 
-// Outras variáveis globais. Elas são lidas da linha de comando
+// Outras variáveis globais.
 int cutoff;
 double min_x, max_x, min_y, max_y, dx, dy;
 
