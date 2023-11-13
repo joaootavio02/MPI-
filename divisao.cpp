@@ -1,4 +1,4 @@
-// Você tem acesso às seguintes variáveis globais:
+// variáveis globais:
 int world_rank, world_size;
 MPI_Comm custom_comm1, custom_comm2, custom_comm3, tmp;
 
