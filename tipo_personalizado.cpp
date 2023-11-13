@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
 
   // Geração dos dados
   for (int i=0; i < n_structure_per_process; ++i) {
-    // Forma terrível de gerar números aleatórios, não reproduza isso em casa
+    // gerar números aleatórios
     data[i].n_values = rand() % DOUBLE_MAX + 1; 
     for (int j=0; j < DOUBLE_MAX; ++j)
       data[i].values[j] = (j < data[i].n_values ? (double)rand() / (double)RAND_MAX : 0.0);
@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
   
   MPI_Gather(data, n_structure_per_process, custom_dt, gathered_data, n_structure_per_process, custom_dt, 0, MPI_COMM_WORLD);
 
-  // E imprimindo
+  // imprimindo
   if (rank == 0) {
     for (int i=0; i < size; ++i) {
       for (int j=0; j < n_structure_per_process; ++j) {
