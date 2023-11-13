@@ -53,7 +53,6 @@ int main(int argc, char **argv) {
         sum += buffer[i];
   }
   // printa o resultado 
-  // Precision is set high for the validation process, please do not modify this.
   std::cout << std::setprecision(16) << sum << std::endl;
   
   MPI_Finalize();
